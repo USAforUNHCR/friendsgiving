@@ -1,0 +1,83 @@
+@import 'variables';
+
+.main-banner{
+  width: 100%;
+  position: relative;
+  height: 40vh;
+  background-image: url(<%= asset_path '../images/friendsgiving.jpg' %>);
+  background-size: cover;
+}
+
+.banner-text{
+  color: #f7a92c;
+  font-size: 88pt;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Amatic SC', sans-serif;
+}
+
+.banner-copy{
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  color: #f7a92c;
+  width: 60%;
+  max-width: 610px;
+  margin-bottom: 2vh auto 0 auto;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 0);
+  font-family: 'Coming Soon', sans-serif;
+}
+
+.leaf-runner{
+  margin-top: 0.5vh;
+  height: 40px;
+  width: 100%;
+  background-image: url(<%= asset_path '../images/leafrunner.svg' %>);
+  opacity: 0.5;
+}
+
+.page-heading{
+  border-bottom: double 4px $heading-brown;
+}
+.post-content{
+  font-family: 'Josefin Slab', serif;
+  display: inline-block;
+  width: 40%;
+  margin-top: 2vh;
+  padding-bottom: 5vh;
+  border-right: double 4px $heading-brown;
+  margin-left: 10%;
+  & a{
+    color: #a54a09;
+  }
+}
+
+.page-heading{
+    font-size: 24pt;
+    color: $heading-brown;
+    margin-bottom: 2vh;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.placecards{
+    font-family: 'Josefin Slab', serif;
+    float:right;
+    width:40%;
+    margin-top: 2vh;
+
+}
+
+.head-icon{
+  float:left;
+  width:50px;
+} 
+
+.home{
+  background-color: #efdbb8;
+}
