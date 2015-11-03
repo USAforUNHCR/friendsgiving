@@ -32,7 +32,9 @@
   transform: translate(-50%, 0);
   font-family: 'Coming Soon', sans-serif;
 }
-
+.page-content{
+  background-color: $background-beige;
+}
 .leaf-runner{
   margin-top: 0.5vh;
   height: 40px;
@@ -46,7 +48,7 @@
 }
 .post-content{
   font-family: 'Josefin Slab', serif;
-  display: inline-block;
+  float: left;
   width: 40%;
   margin-top: 2vh;
   padding-bottom: 5vh;
@@ -55,6 +57,11 @@
   & a{
     color: #a54a09;
   }
+}
+
+.recipe-image{
+  width: 40%;
+  display: block;
 }
 
 .page-heading{
@@ -67,10 +74,9 @@
 
 .placecards{
     font-family: 'Josefin Slab', serif;
-    float:right;
+    float: right;
     width:40%;
     margin-top: 2vh;
-
 }
 
 .head-icon{
