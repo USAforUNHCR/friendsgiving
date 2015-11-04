@@ -1,13 +1,12 @@
 @import 'variables';
 
 .recipe-form{
-  clear: both;
-  width:90%;
+
   background-color: #DA7730;
   color: $heading-brown;
   font-family: 'Josefin Slab', serif;
   font-size: 18pt;
-  padding: 4% 1% 4% 1%;
+  padding: 2% .5% 2% .5%;
   box-sizing: border-box;
   outline: double 3px $heading-brown;
   & h3{

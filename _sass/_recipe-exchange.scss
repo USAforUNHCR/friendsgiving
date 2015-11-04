@@ -1,0 +1,16 @@
+.exchange-copy{
+	@include span-columns(5);
+	@include shift(1);
+	display:inline-block;
+	font-size:1.2em;
+}
+.recipe-form{
+	@include span-columns(5);
+	display:inline-block;
+	margin:-3em 1px;
+}
+
+.gallery-container{
+	@include span-columns(12);
+	padding:10px;
+}
