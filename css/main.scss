@@ -41,12 +41,16 @@ $on-laptop:        800px;
         @content;
     }
 }
-
+//import Bourbon and neat
+@import "../bourbon/bourbon";
+@import "../neat/neat";
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+				"grid-settings",
         "base",
         "layout",
-        "syntax-highlighting"
+        "syntax-highlighting",
+        "header"
 ;
