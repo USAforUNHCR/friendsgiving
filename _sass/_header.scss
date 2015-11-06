@@ -4,11 +4,15 @@
 	@include span-columns(12);
 	padding:0 10px;
 	text-align:center;
-	margin-bottom:8px;
+	margin-bottom:0px;
+	background-color:#EFDBB8;
 
 	h2 {
 		margin:0;
 		padding:7px 4px 7px 4px;
 		
+	}
+	input{
+		margin-bottom:5px;
 	}
 }

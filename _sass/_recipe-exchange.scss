@@ -7,10 +7,40 @@
 .recipe-form{
 	@include span-columns(5);
 	display:inline-block;
-	margin:-3em 1px;
+	margin:-3em  1px 1px 1px;
 }
 
 .gallery-container{
 	@include span-columns(12);
 	padding:10px;
+	padding-bottom: 10em;
+	border-bottom: 2px solid #DA7730;
+	height: 17em;
+
+	.recipe-card {
+		width: 13em;
+		height: 16em;
+		display-inline: block;
+		background-color: #DA7730;
+		border-radius: 5px;
+
+		img {
+			width:100%;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+	
+		#pic-date{
+			padding-left:30%;
+			color:#EFDBB8;
+		}
+		.recipe-name{
+			text-align:center;
+		}
+	}
+	.recipe-card:hover{
+		border: 1px solid #4F2E1E;
+	}
+
+	
 }
