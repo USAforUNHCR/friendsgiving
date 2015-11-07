@@ -3,7 +3,6 @@ layout: home
 ---
 
 <div class="home">
-
   <div class="main-banner">
     <p class="banner-text">Refugee Friendsgiving</p>
     <p class="banner-copy">There are 60 million refugees worldwide who do not get to be home for the holidays. At your Friendsgiving, take the opportunity to talk about the global refugee crisis with your friends. No, you’re not going to solve the refugee crisis, but you will add your voice to a cause that needs so much more of our attention.</p>
@@ -14,6 +13,12 @@ layout: home
     <div class="post-content">
       <h1 class="page-heading"><span class="head-icon">{% image pie.svg %}</span>Recipe Exchange</h1>
       <p class="exchange-copy">Culinary traditions are important everywhere. Just as you wouldn’t hear of changing one ingredient of your grandma’s secret stuffing, refugees hold the foods from their home countries close to their hearts as well. We invite you to prepare your Friendsgiving meal with us. Share your favorite Friendsgiving recipe and we will share with you a recipe from Syria, the Central American Northern Triangle region, or another country with a refugee emergency. Help preserve these cultures and add an international flair to your table.</p>
+
+      <div class="exchange-prompt"> 
+        <button id="share-button">Share your Friendsgiving recipe with us</button>
+        <h2>or</h2>
+        <button id="download-recipe-button">download our recipes!</button>
+      </div>
 
       {% include recipe-form.html %}
 

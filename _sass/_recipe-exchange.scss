@@ -1,12 +1,59 @@
+.post-list{
+
+	li{
+		display:inline-block;
+		vertical-align:text-top;
+	}
+}
+.page-heading{
+		@include media($mobile){
+			width:100%;
+		}
+	}
+.exchange-prompt {
+	font-family: $font;
+	background-color: $light-orange;
+	@include span-columns(5);
+	display:inline-block;
+	margin:-3em  1px 1px 1px;
+	text-align:center;
+	padding:2em .5em 1em .5em;
+	border-radius:1em;
+	@include media($mobile){
+		@include shift(0);
+		display:block;
+		@include span-columns(4 or 4);
+		clear:both;
+	}
+	button {
+		border:none;
+		background-color: $light-orange;
+		text-decoration: underline;
+		font-family: $font;
+		font-size: 2em;
+		text-align:center;
+		color:$light-beige;
+	}
+	button:hover{
+		color: $brown;
+	}
+}
 .exchange-copy{
 	@include span-columns(5);
 	@include shift(1);
 	display:inline-block;
 	font-size:1.2em;
+	@include media($mobile){
+		@include shift(0);
+		@include span-columns(4 or 4);
+		margin-bottom:5em;
+	}
 }
 .recipe-form{
+	z-index: 10;
 	@include span-columns(5);
 	display:inline-block;
+	display:none;
 	margin:-3em  1px 1px 1px;
 }
 
@@ -16,6 +63,8 @@
 	padding-bottom: 10em;
 	border-bottom: 2px solid #DA7730;
 	height: 17em;
+	overflow-y: hidden;
+	overflow-x: scroll;
 
 	.recipe-card {
 		width: 13em;

@@ -1,10 +1,22 @@
 .placecards{
+	width:100%;
 	@include span-columns(12);
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		@include shift(0);
+		width:100%;
+	}
 }
 .placecard-copy{
 	@include span-columns(6);
 	@include shift(1);
 	font-size:1.2em;
+	
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		@include shift(0);
+	}
+	
 }
 .placecard-form{
 	background-color: #F7A92C;
@@ -13,6 +25,12 @@
 	padding: 2% .5% 2% .5%;
 	outline: double 3px $heading-brown;
 	float:right;
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		@include shift(0);
+		margin-bottom:5em;
+	}
+
 	label{
 		color:$heading-brown;
 		font-size:1.5em;
