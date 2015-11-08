@@ -71,12 +71,12 @@
 	white-space: wrap;
 
 	.recipe-card {
-		width: 13em;
+		width: 15em;
 		height: 14em;
 		display-inline: block;
 		background-color: #DA7730;
 		border-radius: 5px;
-		white-space: nowrap;
+		word-wrap: break-word;
 
 		.image-container{
 			height: 7em;
@@ -101,8 +101,13 @@
 		}
 		.recipe-name{
 			white-space: wrap;
+			text-algin:center;
 			font-size: 1.4em;
-			padding: 10px;
+			white-space:normal;
+			text-align:center;
+			float:center;
+			padding: .4em;
+			
 		}
 	}
 	.recipe-card:hover{
