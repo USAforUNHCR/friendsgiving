@@ -1,3 +1,4 @@
+
 .post-list{
 
 	li{
@@ -49,13 +50,7 @@
 		margin-bottom:5em;
 	}
 }
-.recipe-form{
-	z-index: 10;
-	@include span-columns(5);
-	display:inline-block;
-	display:none;
-	margin:-3em  1px 1px 1px;
-}
+
 
 .gallery-container{
 	@include span-columns(12);
