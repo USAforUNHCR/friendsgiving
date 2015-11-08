@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Kibbe in Yogurt Sauce"
-date:   2015-10-13 10:53:36
+date:   2015-10-13 10:53:40
 categories: jekyll update
 image: ./images/potatoes.jpg
 type: recipe
