@@ -1,11 +1,13 @@
-.conversation {
+.conversation, .mobile {
+	width:100%;
 	@include span-columns(12);
 	font-family: 'Josefin Slab', serif;
 }
-.conversation-copy {
+.conversation-copy, .mobile-copy {
 	@include span-columns(5);
 	@include shift(1);
 	font-size:1.2em;
+
 	@include media($mobile){
 		@include span-columns(4 of 4);
 		@include shift(0);
@@ -14,21 +16,32 @@
 }
 .conversation-form{
 	background-color: #F7A92C;
+	color: $brown;
+	margin-right: 1em;
 	@include span-columns(5);
 	padding: 2% .5% 2% .5%;
 	outline: double 3px $heading-brown;
 	float:right;
 	label{
-		color:$heading-brown;
-		font-size:1.5em;
-		margin-left:10%;
+		color: $heading-brown;
+		font-size: 1.5em;
+		margin-left: 23%;
+	}
+	h3{
+		text-align: center;
+		font-size: 1.7em;
+		display: block;
+		@include media($mobile){
+			@include span-columns(4 of 4);
+			@include shift(0);
+		}
 	}
 	input{
 
 	}
 	& [type="submit"]{
 			width: 5em;
-      margin: auto;
+			margin: auto;
       margin-top: 2%;
       display: block;
       font-family: inherit;
@@ -43,4 +56,12 @@
 		@include span-columns(4 of 4);
 		@include shift(0);
 	}
+}
+.mobile{
+	@include span-columns(12);
+	@include shift(0)
+}
+.mobile-copy{
+	@include span-columns(10);
+	@include shift(1)
 }
