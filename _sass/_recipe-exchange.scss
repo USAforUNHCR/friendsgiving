@@ -67,6 +67,14 @@
 		display-inline: block;
 		background-color: #DA7730;
 		border-radius: 5px;
+		.image-container{
+			height: 7em;
+			overflow:hidden;
+		}
+		.image-container:hover{
+			height: 8.2em;
+			transition: 1s;
+		}
 
 		img {
 			width:100%;

@@ -33,9 +33,11 @@ layout: home
               <li>
                 <div class="recipe-card">
                   {% if post.image %}
+                  <div class="image-container">
                     <img src="{{post.image}}" class="recipe-image">
+                  </div>
                   {% endif %}
-                  <span class="post-meta country" id="country">{{ post.country }}</span>
+                  <span class="post-meta country" id="country"> A recipe from {{ post.country }}</span>
                   <h2 class="recipe-name">{{ post.title }}</h2>
                 </div>
               </li>

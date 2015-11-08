@@ -4,7 +4,7 @@ title:  "Ukrainian Borscht"
 date:   2015-10-13 10:53:36
 country: "Ukraine"
 categories: jekyll update
-image: ./images/potatoes.jpg
+image: ./images/ukrainerecipe_NatashasKitchen.com.jpg
 type: recipe
 ---
 
