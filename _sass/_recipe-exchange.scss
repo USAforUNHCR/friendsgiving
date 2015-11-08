@@ -1,5 +1,7 @@
 
 .post-list{
+	width:100%;
+	overflow-y: scroll;
 
 	li{
 		display:inline-block;
@@ -58,15 +60,17 @@
 	padding-bottom: 10em;
 	border-bottom: 2px solid #DA7730;
 	height: 17em;
+	width:100%;
 	overflow-y: hidden;
 	overflow-x: scroll;
 
 	.recipe-card {
 		width: 13em;
-		height: 16em;
+		height: 14em;
 		display-inline: block;
 		background-color: #DA7730;
 		border-radius: 5px;
+
 		.image-container{
 			height: 7em;
 			overflow:hidden;
