@@ -2,9 +2,13 @@
 .post-list{
 	overflow-y: scroll;
 	@include span-columns(11 of 12);
-
 	white-space: nowrap;
-
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		@include shift(0);
+		margin-left: 5px;
+		padding-left:0;
+	}
 
 	li{
 		display:inline-block;
@@ -69,6 +73,13 @@
 	overflow-y: hidden;
 	overflow-x: scroll;
 	white-space: wrap;
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		@include shift(0);
+		margin-left:0;
+		padding-left:0;
+	}
+
 
 	.recipe-card {
 		width: 15em;

@@ -14,6 +14,7 @@
 	
 	@include media($mobile){
 		@include span-columns(4 of 4);
+		padding:4px;
 		@include shift(0);
 	}
 	
@@ -22,7 +23,7 @@
 	background-color: #F7A92C;
 	@include span-columns(5);
 	color: $brown;
-	margin-top:-5em;
+	margin-top: -2.5em;
 	padding: 2% .5% 2% .5%;
 	outline: double 3px $heading-brown;
 	float:right;
