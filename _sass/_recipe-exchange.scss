@@ -74,12 +74,15 @@
 			border-top-right-radius: 5px;
 		}
 	
-		#pic-date{
-			padding-left:30%;
+		#pic-date, .country{
+			padding-left: 5px;
+
 			color:#EFDBB8;
+			text-align:right;
 		}
 		.recipe-name{
 			text-align:center;
+			font-size: 1.4em;
 		}
 	}
 	.recipe-card:hover{

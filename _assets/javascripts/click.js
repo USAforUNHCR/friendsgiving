@@ -7,11 +7,25 @@ $( document ).ready(function() {
 			$("#veil").hide();
 			$("#create-recipe-form").hide();
 		});
+		$("#recipe-cancel").on("click", function(){
+			$("#veil").hide();
+			$("#create-recipe-form").hide();
+		})
 
 			console.log("show new recipe modal")
 	})
 	// email and name modal for recipe download
 	$("#download-recipe-button").on("click", function(){
+		$("#download-recipe-form").show();
+		$("#veil").show();
+		$("#veil").on("click", function(){
+			$("#veil").hide();
+			$("#download-recipe-form").hide();
+		});
+		$("#recipe-download-cancel").on("click", function(){
+			$("#veil").hide();
+			$("#download-recipe-form").hide();
+		})
 			console.log("download recipe modal")
 	})
 	// email and name modal for placecard download

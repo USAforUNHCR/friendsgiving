@@ -5,7 +5,7 @@
 	display:inline-block;
 	position:fixed;
 }
-#create-recipe-form{
+.recipe-form, #create-recipe-form{
 	position:fixed;
 	@include span-columns(8);
 	@include shift(2);
@@ -41,23 +41,38 @@
     width: 40%;
     height:2em;
   }
-  & [type="submit"]{
-      width: 5em;
-      margin: auto;
-      margin-top: 2%;
-      margin-bottom: 2%;
-      display: block;
-      font-family: inherit;
-      font-size: 18pt;
-      background-color: $background-beige;
-      color: $heading-brown;
-      border: none;
-      border-radius: 4px;
-      transition: all .3s ease-in-out;
+  & [type="submit"], .cancel{
+    width: 5em;
+    height:2em;
+    display: inline-block;
+    margin: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: inherit;
+    font-size: 18pt;
+    background-color: $background-beige;
+    color: $heading-brown;
+    border: none;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+    @include media($mobile) {
+    	@include span-columns(2 of 4);
+    	@include shift(1);
+    	display:block
+    }
     &:hover{
       color: $text-yellow;
       background-color: $heading-brown;
     }
+  }
+  .cancel{
+  	margin-left:16%;
+  	display:inline-block;
+  	@include media($mobile) {
+	  	@include span-columns(2 of 4);
+    	@include shift(1);
+	  	display:block;
+  	}
   }
   textarea{
   	margin-top:.5em;
@@ -72,7 +87,9 @@
   	margin:0;
   	padding:0;
   	display:none;
-  	
+  	height:17em;
+  	overflow:scroll;
+
   	label{
   		@include span-columns(2 of 4);
   		@include shift(1);
@@ -82,6 +99,11 @@
   		@include span-columns(2 of 4);
   		@include shift(1);
   		
+  	}
+  	textarea{
+  		width:80%;
+  		margin-right:10%;
+  		margin-left:10%;
   	}
   }
   position:fixed;
