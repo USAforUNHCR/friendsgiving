@@ -12,7 +12,6 @@ $( document ).ready(function() {
 			$("#create-recipe-form").hide();
 		})
 
-			console.log("show new recipe modal")
 	})
 	// email and name modal for recipe download
 	$("#download-recipe-button").on("click", function(){
