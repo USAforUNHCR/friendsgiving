@@ -14,6 +14,10 @@ $(document).ready(function(){
   placeCardSignup(id,gw);
   topicSignup(id,gw);
 
+  showRecipe();
+  showPlacecard();
+  showTopic();
+
 
 });
 
@@ -143,6 +147,7 @@ function recipeSignup(id,gw){
     var network = $(event.target).attr('class');
     sendRecipeSignup(id,network,gw);
   });
+  
 
 }
 
@@ -159,10 +164,12 @@ function sendRecipeSignup(id,network,gw){
   console.log(data);
   gw.supporters.create(data)
   .then(function(res){
+    localStorage.recipe = "show";
     console.log(res);
     console.log("success")
   })
   .catch(function(res){
+
     console.log(res);
     console.log("failure")
     $("#download-recipe-error").append("We're sorry, an error has occured.")
@@ -177,7 +184,6 @@ function placeCardSignup(id,gw){
     var network = $(event.target).attr('class');
     sendPlaceCardSignup(id,network,gw);
   });
-
 }
 
 function sendPlaceCardSignup(id,network,gw){
@@ -192,11 +198,14 @@ function sendPlaceCardSignup(id,network,gw){
   gw.supporters.create(data)
   .then(function(res){
     console.log(res);
+    localStorage.placecard = "show";
     console.log("success")
   })
   .catch(function(res){
+    showPlacecard()
     console.log(res);
     console.log("failure")
+
     $("#placecard-error").append("We're sorry, an error has occured.")
   });
 };
@@ -210,6 +219,7 @@ function topicSignup(id,gw){
     var network = $(event.target).attr('class');
     sendTopicSignup(id,network,gw);
   });
+  
 
 }
 
@@ -224,12 +234,47 @@ function sendTopicSignup(id,network,gw){
   console.log(data);
   gw.supporters.create(data)
   .then(function(res){
+    localStorage.topic = "show";
     console.log(res);
     console.log("success")
   })
   .catch(function(res){
+    
     console.log(res);
     console.log("failure")
-    $("#placecard-error").append("We're sorry, an error has occured.")
+    $("#topic-error").append("We're sorry, an error has occured.")
   });
 };
+
+//recipe
+function showRecipe() {
+  
+  if (localStorage.recipe == "show") {
+    $("#download-recipe").show();
+  } else {
+    $("#download-recipe").hide();
+  }
+}
+
+//placecard
+
+function showPlacecard() {
+  console.log(localStorage)
+  
+  console.log("AGAHAHHAHAH 3")
+  if (localStorage.placecard == "show") {
+    $("#download-place-cards").show();
+  } else {
+    $("#download-place-cards").hide();
+  }
+}
+//topic
+function showTopic() {
+  $("#download-topics").hide();
+  if (localStorage.topic == "show") {
+    $("#download-topics").show();
+  } else {
+    $("#download-topics").hide();
+  }
+}
+

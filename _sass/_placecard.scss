@@ -98,6 +98,23 @@
   @include media($mobile){
 		@include span-columns(2 of 4);
 		@include shift(1);
-		display: block;
+
 	}
+	display:none;
+
+}
+a#download-recipe{
+	
+}
+#download-recipe{
+	
+}
+#download-place-cards{
+	display:none;
+}
+#download-topics{
+	display:none;
+}
+a#download-topics.download{
+	display:none;
 }

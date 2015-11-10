@@ -48,6 +48,9 @@
 	button:hover{
 		color: $brown;
 	}
+	a#download-recipe.download{
+		display:none;
+	}
 }
 .exchange-copy{
 	@include span-columns(5);
@@ -60,6 +63,7 @@
 		margin-bottom: 5em;
 		padding: 6px;
 	}
+	
 }
 
 
