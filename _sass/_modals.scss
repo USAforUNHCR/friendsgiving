@@ -1,0 +1,121 @@
+
+#create-recipe-form{
+	position:fixed;
+	@include span-columns(5);
+	display:inline-block;
+	position:fixed;
+}
+.recipe-form, #create-recipe-form{
+	position:fixed;
+	@include span-columns(8);
+	@include shift(2);
+	display:inline-block;
+	position:fixed;
+	z-index: 999;
+	display:none;
+  background-color: #DA7730;
+  color: $heading-brown;
+  font-family: 'Josefin Slab', serif;
+  font-size: 18pt;
+  top: 15%;
+
+  box-sizing: border-box;
+  outline: double 3px $heading-brown;
+  display:none;
+  & h3{
+    width: 80%;
+    margin-top:4%;
+    margin-left:10%;
+    margin-right:10%;
+    text-align: center;
+    border-bottom: 3px double $text-yellow;
+    padding-bottom: 2%;
+  }
+  & label{
+    display: inline-block;
+    width: 40%;
+    margin-right: 8px;
+    text-align: right;
+  }
+  & input{
+    width: 40%;
+    height:2em;
+  }
+  & [type="submit"], .cancel{
+    width: 5em;
+    height:2em;
+    display: inline-block;
+    margin: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-family: inherit;
+    font-size: 18pt;
+    background-color: $background-beige;
+    color: $heading-brown;
+    border: none;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+    @include media($mobile) {
+    	@include span-columns(2 of 4);
+    	@include shift(1);
+    	display:block
+    }
+    &:hover{
+      color: $text-yellow;
+      background-color: $heading-brown;
+    }
+  }
+  .cancel{
+  	margin-left:16%;
+  	display:inline-block;
+  	@include media($mobile) {
+	  	@include span-columns(2 of 4);
+    	@include shift(1);
+	  	display:block;
+  	}
+  }
+  textarea{
+  	margin-top:.5em;
+  	height: 12em;
+  	width: 40%;
+  	vertical-align:text-top;
+  	padding-top:1em;
+  }
+  @include media($mobile) {
+  	top: 8%;
+  	@include span-columns(4 of 4);
+  	margin:0;
+  	padding:0;
+  	display:none;
+  	height:17em;
+  	overflow:scroll;
+
+  	label{
+  		@include span-columns(2 of 4);
+  		@include shift(1);
+  		text-align: center;
+  	}
+  	input {
+  		@include span-columns(2 of 4);
+  		@include shift(1);
+  		
+  	}
+  	textarea{
+  		width:80%;
+  		margin-right:10%;
+  		margin-left:10%;
+  	}
+  }
+  position:fixed;
+  display:none;
+}
+#veil {
+	top:0;
+	height: 100%;
+	width:100%;
+	background-color:black;
+	opacity: .6;
+	z-index: 2;
+	position:fixed;
+	display:none;
+}

@@ -1,14 +1,16 @@
-<form class="recipe-form">
+<form class="recipe-form" id="create-recipe-form">
   <h3>Share your Friendsgiving recipe with us!</h3>
   <label>email*</label>
-  <input type="email" required>
+  <input type="email" name="email" required>
   <label> name*</label>
-  <input type="text" required>
+  <input type="text" name="name" required>
   <label>recipe name*</label>
-  <input type="text" required>
+  <input type="text" name="recipeName" required>
   <label>instructions*</label>
-  <input type="textarea" required>
+  <textarea name="instructions"></textarea>
   <label>image link</label>
-  <input type="url">
+  <input type="url" name="imageUrl">
+  <button class="cancel" id="recipe-cancel">Cancel</button>
   <input type="submit">
+  <p class="error" id="share-recipe-error"></p>
 </form>

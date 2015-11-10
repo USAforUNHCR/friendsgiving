@@ -1,0 +1,51 @@
+.main-banner{
+	
+}
+
+.banner-text{
+	color: $text-yellow;
+  font-size: 5em;
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Amatic SC', sans-serif;
+  @include media($tablet) {
+    @include span-columns(8 of 8);
+    font-size: 4.2em;
+    top: 16%;
+  }
+	@include media($mobile) {
+		@include span-columns(4 of 4);
+		font-size:2.4em;
+		top: 15%;
+	}
+	
+}
+.banner-copy{
+	text-align: center;
+  position: absolute;
+  bottom: 0;
+  color: $text-yellow;
+  @include span-columns(10 of 12);
+  padding:5%;
+  margin-bottom: 2vh auto 0 auto;
+  font-family: 'Coming Soon', sans-serif;
+  @include media($tablet) {
+    @include span-columns(8 of 8);
+    width: 100%;
+    padding:0 10% 0 10%;
+    bottom: 10%;
+    margin:5px;
+  }
+  @include media($mobile) {
+		@include span-columns(4 of 4);
+		width: 100%;
+		padding:0 3px 0 3px;
+		bottom: 2%;
+		margin:3px;
+    font-size: .8em;
+	}
+}

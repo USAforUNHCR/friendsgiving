@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Kibbe in Yogurt Sauce"
+date:   2015-10-13 10:53:40
+country: "Syria"
+categories: jekyll update
+image: ./images/syriarecipe_MARK_ROPER.png
+type: recipe
+---

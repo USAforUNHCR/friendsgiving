@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "three"
+date:   2015-10-13 10:53:33
+categories: jekyll update
+image: ./images/potatoes.jpg
+type: placecard
+---

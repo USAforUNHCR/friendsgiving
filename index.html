@@ -2,39 +2,138 @@
 layout: home
 ---
 
-<div class="home">
 
+<div class="home">
   <div class="main-banner">
-    <p class="banner-text">Friendsgiving.</p>
-    <p class="banner-copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p class="banner-text">Refugee Friendsgiving</p>
+    <p class="banner-copy">There are 60 million refugees worldwide who do not get to be home for the holidays. At your Friendsgiving, take the opportunity to talk about the global refugee crisis with your friends. No, you’re not going to solve the refugee crisis, but you will add your voice to a cause that needs so much more of our attention.</p>
   </div>
   <div class="leaf-runner">
   </div>
   <div class="page-content">
     <div class="post-content">
-      <h1 class="page-heading"><span class="head-icon">{% image pie.svg %}</span>Recipes</h1>
+      <h1 class="page-heading"><span class="head-icon">{% image pie.svg %}</span>Recipe Exchange</h1>
+      <p class="exchange-copy">Culinary traditions are important everywhere. Just as you wouldn’t hear of changing one ingredient of your grandma’s secret stuffing, refugees hold the foods from their home countries close to their hearts as well. We invite you to prepare your Friendsgiving meal with us. Share your favorite Friendsgiving recipe and we will share with you a recipe from Syria, the Central American Northern Triangle region, or another country with a refugee emergency. Help preserve these cultures and add an international flair to your table.</p>
+
+      <div class="exchange-prompt"> 
+        <button id="share-button">Share your Friendsgiving recipe with us</button>
+        
+
+        <h2>or</h2>
+        <button id="download-recipe-button">download our recipes!</button>
+      </div>
+
+      
+
+      <div class="gallery-container">
+
+        <ul class="post-list">
+          {% for post in site.posts %}
+            {% if post.type == "recipe" %}
+              <li>
+                <div class="recipe-card">
+                  {% if post.image %}
+                  <div class="image-container">
+                    <img src="{{post.image}}" class="recipe-image">
+                  </div>
+                  {% endif %}
+                  <span class="post-meta country" id="country"> A recipe from {{ post.country }}</span>
+                  <h2 class="recipe-name">{{ post.title }}</h2>
+                </div>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      
+    </div>
+    <div class="placecards">
+      <h1 class="page-heading"><span class="head-icon">{% image placecard.svg %}</span>Place Cards</h1>
+      <p class="placecard-copy">We know the seating arrangement can make or break the evening – you can’t have your best friend sit next to her ex when she has her eye on your new neighbor, after all. So that everyone will know the proper place to sit, we have for you a set of printable place cards for your Friendsgiving dinner. But these cards do more than help you avoid awkward arrangements. Your guests can find their names to know where to sit. But on each place card, they’ll also find another name – that of a refugee whose story they can share with the table.</p>
+      <div class="placecard-form">
+
+        <h3>Download a sample place card</h3>
+          <button id="sample-placecard-download">Sample</button>
+          <h3>or</h3>
+        <form id="placecard-form">
+          
+          <h3>Enter your name and email to download our place card set!</h3>
+          <label>name*</label>
+          <input type="text" required><br>
+          <label>email*</label>
+          <input type="email" required><br>
+
+          <input type="submit">
+          <p class="error" id="placecard-error"></p>
+
+        </form>
+      </div>
+      <div class="gallery-container">
+
+        <ul class="post-list">
+          {% for post in site.posts %}
+            {% if post.type == "placecard" %}
+              <li>
+                <div class="recipe-card">
+                  {% if post.image %}
+                    <img src="{{post.image}}" class="recipe-image">
+                  {% endif %}
+                  <span class="post-meta" id="pic-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                  <h2 class="recipe-name">{{ post.title }}</h2>
+                </div>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="conversation">
+      <h1 class="page-heading"><span class="head-icon">{% image placecard.svg %}</span>Table Conversation Topics</h1>
+      <p class="conversation-copy">Think about the last time you sat down with a family member, friend, or even an acquaintance and had a really good conversation. In today’s digital age, we communicate via likes and retweets. This Friendsgiving, strike up a face-to-face conversation about something meaningful over your Friendsgiving dinner.</p>
+      <div class="conversation-form">
+        <h3>Download our dinner conversation starters!</h3>
+       
+        <form id="topic-form">
+          <label>name</label>
+          <input type="text" required><br>
+          <label >email</label>
+          <input type="email" required><br>
+          <input type="submit">
+          <p class="error" id="topic-error"></p>
+        </form>
+      </div>
+      <div></div>
+      
+    </div>
+    <div class="gallery-container">
       <ul class="post-list">
         {% for post in site.posts %}
-          {% if post.type == "recipe" %}
+          {% if post.type == "topic" %}
+
             <li>
-              {% if post.image %}
-              <a href="{{ post.url | prepend: site.baseurl }}"><img src="{{post.image}}" class="recipe-image"></a>
+              <div class="recipe-card">
+                {% if post.image %}
+                  <img src="{{post.image}}" class="recipe-image">
+                  
                 {% endif %}
-              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-              <h2>
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}
-              </a>
-              </h2>
+                <span class="post-meta" id="pic-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <h2 class="recipe-name">{{ post.title }}</h2>
+              </div>
             </li>
           {% endif %}
         {% endfor %}
       </ul>
-      {% include recipe-form.html %}
     </div>
-    <div class="placecards">
-      <h1 class="page-heading"><span class="head-icon">{% image placecard.svg %}</span>Placecards</h1>
+    <div class="mobile" >
+      <h1 class="page-heading"><span class="head-icon"></span> Mobile Game</h1>
+      <p class="mobile-copy">Play the Friendsgiving Scavenger Hunt right at your table! Have all your
+        Friendsgiving guests text PLAY to 69866 and they’ll receive different clues for items 
+        found around a Friendsgiving table that relate all of us to the refugee crisis. Text the 
+        name or a photo of those items back and receive the next clue. At the end of the
+        Scavenger Hunt, you decide what your winner’s prize will be!</p>
     </div>
   </div>
-  
+ 
 
 </div>

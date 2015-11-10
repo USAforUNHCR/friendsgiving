@@ -49,8 +49,15 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 				"grid-settings",
+				"variables",
         "base",
         "layout",
         "syntax-highlighting",
-        "header"
+        "header",
+        "banner",
+        "recipe-exchange",
+        "placecard",
+        "conversation",
+        "footer",
+        "modals"
 ;

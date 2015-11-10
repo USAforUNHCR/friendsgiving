@@ -1,0 +1,85 @@
+.site-footer{
+	font-family: 'Josefin Slab', serif;
+	background-color: $light-orange;
+	color: $light-beige;
+
+	a {
+		color:$brown;
+	}
+	text{
+
+
+	}
+}
+.icon{
+	height: 50px;
+	padding:2px;
+	margin:3px;
+	background-color: $light-beige;
+	border-radius:8px;
+	float:right;
+}
+.icon:hover{
+	background-color:white;
+}
+.un-logo{
+	width:120px;
+	background-color:white;
+	padding: 10px;
+	border-radius:8px;
+	display: block;
+	margin-right:10px;
+	float:right;
+
+}
+.footer-left{
+	@include span-columns(6);
+	display:inline-block;
+	float:left;
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		float: center;
+		text-align: center;
+	}
+}
+.footer-right{
+	@include span-columns(6);
+	display:inline-block;
+	float:right;
+	@include media($tablet){
+		@include span-columns(8 of 8);
+	}
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		float: center;
+		text-align: center;
+	}
+}
+.footer-email{
+	@include span-columns(6);
+	display:inline-block;
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		float: center;
+		text-align: center;
+	}
+
+}
+.icon-container{
+	@include span-columns(6);
+	display:block;
+	margin-right: 0;
+	margin-top: -5em;
+	float:right;
+	@include media($tablet){
+		@include span-columns(8 of 8);
+		display:block;
+	}
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		margin:10px auto 10px auto;
+		float:none;
+		text-align: center;
+
+	}
+}

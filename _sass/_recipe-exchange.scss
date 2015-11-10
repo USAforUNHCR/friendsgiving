@@ -1,0 +1,129 @@
+
+.post-list{
+	overflow-y: scroll;
+	@include span-columns(11 of 12);
+	white-space: nowrap;
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		@include shift(0);
+		margin-left: 5px;
+		padding-left:0;
+	}
+
+	li{
+		display:inline-block;
+		vertical-align:text-top;
+	}
+}
+.page-heading{
+		@include media($mobile){
+			@include span-columns(4 of 4);
+		}
+	}
+.exchange-prompt {
+	font-family: $font;
+	background-color: $light-orange;
+	@include span-columns(5);
+
+	display: inline-block;
+	margin: -4em  1px 1px 1px;
+	text-align: center;
+	padding: 2em .5em 2em .5em;
+	outline: double 3px $heading-brown;
+	@include media($mobile){
+		@include shift(0);
+		display:block;
+		@include span-columns(4 or 4);
+		clear:both;
+	}
+	button {
+		border:none;
+		background-color: $light-orange;
+		text-decoration: underline;
+		font-family: $font;
+		font-size: 2em;
+		text-align:center;
+		color:$light-beige;
+	}
+	button:hover{
+		color: $brown;
+	}
+}
+.exchange-copy{
+	@include span-columns(5);
+	@include shift(1);
+	display:inline-block;
+	font-size:1.2em;
+	@include media($mobile){
+		@include shift(0);
+		@include span-columns(4 or 4);
+		margin-bottom: 5em;
+		padding: 6px;
+	}
+}
+
+
+.gallery-container{
+	
+	padding:10px;
+	padding-bottom: 10em;
+	border-bottom: 2px solid #DA7730;
+	height: 17em;
+	@include span-columns(12 of 12);
+	overflow-y: hidden;
+	overflow-x: scroll;
+	white-space: wrap;
+	@include media($mobile){
+		@include span-columns(4 of 4);
+		@include shift(0);
+		margin-left:0;
+		padding-left:0;
+	}
+
+
+	.recipe-card {
+		width: 15em;
+		height: 14em;
+		display-inline: block;
+		background-color: #DA7730;
+		border-radius: 5px;
+		word-wrap: break-word;
+
+		.image-container{
+			height: 7em;
+			overflow:hidden;
+		}
+		.image-container:hover{
+			height: 8.2em;
+			transition: 1s;
+		}
+
+		img {
+			width:100%;
+			border-top-left-radius: 5px;
+			border-top-right-radius: 5px;
+		}
+	
+		#pic-date, .country{
+			padding-left: 5px;
+
+			color:#EFDBB8;
+			text-align:right;
+		}
+		.recipe-name{
+			white-space: wrap;
+			text-algin:center;
+			font-size: 1.4em;
+			white-space:normal;
+			text-align:center;
+			float:center;
+			padding: .4em;
+			
+		}
+	}
+	.recipe-card:hover{
+		border: 1px solid #4F2E1E;
+	}
+
+	
+}
