@@ -55,7 +55,7 @@ layout: home
         <h3>Download a sample place card</h3>
           <button id="sample-placecard-download">Sample</button>
           <h3>or</h3>
-        <form >
+        <form id="placecard-form">
           
           <h3>Enter your name and email to download our place card set!</h3>
           <label>name*</label>
@@ -64,6 +64,7 @@ layout: home
           <input type="email" required><br>
 
           <input type="submit">
+          <p class="error" id="placecard-error"></p>
 
         </form>
       </div>
@@ -93,12 +94,13 @@ layout: home
       <div class="conversation-form">
         <h3>Download our dinner conversation starters!</h3>
        
-        <form >
+        <form id="topic-form">
           <label>name</label>
           <input type="text" required><br>
           <label >email</label>
           <input type="email" required><br>
           <input type="submit">
+          <p class="error" id="topic-error"></p>
         </form>
       </div>
       <div></div>
@@ -130,6 +132,6 @@ layout: home
         Scavenger Hunt, you decide what your winner’s prize will be!</p>
     </div>
   </div>
-  
+ 
 
 </div>
