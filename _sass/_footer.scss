@@ -52,6 +52,7 @@
 	@include media($mobile){
 		@include span-columns(4 of 4);
 		float: center;
+		margin:auto;
 		text-align: center;
 	}
 }
@@ -78,7 +79,7 @@
 	@include media($mobile){
 		@include span-columns(4 of 4);
 		margin:10px auto 10px auto;
-		float:none;
+		float:center;
 		text-align: center;
 
 	}
