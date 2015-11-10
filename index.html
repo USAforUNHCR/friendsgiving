@@ -110,10 +110,12 @@ layout: home
       <ul class="post-list">
         {% for post in site.posts %}
           {% if post.type == "topic" %}
+
             <li>
               <div class="recipe-card">
                 {% if post.image %}
                   <img src="{{post.image}}" class="recipe-image">
+                  
                 {% endif %}
                 <span class="post-meta" id="pic-date">{{ post.date | date: "%b %-d, %Y" }}</span>
                 <h2 class="recipe-name">{{ post.title }}</h2>
