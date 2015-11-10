@@ -55,12 +55,13 @@ layout: home
       <p class="placecard-copy">We know the seating arrangement can make or break the evening – you can’t have your best friend sit next to her ex when she has her eye on your new neighbor, after all. So that everyone will know the proper place to sit, we have for you a set of printable place cards for your Friendsgiving dinner. But these cards do more than help you avoid awkward arrangements. Your guests can find their names to know where to sit. But on each place card, they’ll also find another name – that of a refugee whose story they can share with the table.</p>
       <div class="placecard-form">
 
-        <h3>Download a sample place card</h3>
-          <button id="sample-placecard-download">Sample</button>
-          <h3>or</h3>
-        <form id="placecard-form">
+        <h3>Download our friendsgiving place card set!</h3>
           
-          <h3>Enter your name and email to download our place card set!</h3>
+        <form id="placecard-form">
+
+          {% image card.png  %}
+          
+          <h3>Enter your name and email to download</h3>
           <label>name*</label>
           <input type="text" required><br>
           <label>email*</label>
@@ -73,24 +74,6 @@ layout: home
 
 
         </form>
-      </div>
-      <div class="gallery-container">
-
-        <ul class="post-list">
-          {% for post in site.posts %}
-            {% if post.type == "placecard" %}
-              <li>
-                <div class="recipe-card">
-                  {% if post.image %}
-                    <img src="{{post.image}}" class="recipe-image">
-                  {% endif %}
-                  <span class="post-meta" id="pic-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                  <h2 class="recipe-name">{{ post.title }}</h2>
-                </div>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
       </div>
     </div>
 

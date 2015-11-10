@@ -93,14 +93,22 @@
   background-color: $background-beige;
   color: $heading-brown;
   border: none;
+
   border-radius: 4px;
   transition: all .3s ease-in-out;
+  @include media($tablet){
+  	clear:both;
+  }
   @include media($mobile){
 		@include span-columns(2 of 4);
 		@include shift(1);
 
 	}
-	display:none;
+	display:block;
+
+}
+a#download-place-cards.download{
+	display: block;
 
 }
 a#download-recipe{
