@@ -270,11 +270,11 @@ function showPlacecard() {
 }
 //topic
 function showTopic() {
-  $("#download-topics").hide();
+  $("#download-topics").show();
   if (localStorage.topic == "show") {
     $("#download-topics").show();
   } else {
-    $("#download-topics").hide();
+    $("#download-topics").show();
   }
 }
 
