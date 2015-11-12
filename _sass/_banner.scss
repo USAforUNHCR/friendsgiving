@@ -1,9 +1,10 @@
 .main-banner{
-	
+  background-color: $background-beige  ;
 }
 
 .banner-text{
-	color: $text-yellow;
+
+	color: $brown;
   font-size: 5em;
   text-align: center;
   position: absolute;
@@ -29,6 +30,7 @@
   position: absolute;
   bottom: 0;
   color: $text-yellow;
+  color: $brown;
   @include span-columns(10 of 12);
   padding:5%;
   margin-bottom: 2vh auto 0 auto;
