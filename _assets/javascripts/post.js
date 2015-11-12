@@ -49,6 +49,7 @@ function sendRecipeData(id,network,gw){
   var data = {
     source: "friendsgiving header signup",
     email: $('.email-signup')[0][0].value,
+    sendEmail: 0,
     name: $('.email-signup')[0][1].value,
     mobile: $('.email-signup')[0][2].value,
     tags: {
@@ -87,6 +88,7 @@ function sendHeaderData(id,network,gw){
   var data = {
     source: "friendsgiving share recipe",
     email: "test@test.com",
+    sendEmail: 0,
     tags: {
       email: $('#create-recipe-form')[0][0].value,
       name: $('#create-recipe-form')[0][1].value,
@@ -124,6 +126,7 @@ function sendRecipeSignup(id,network,gw){
   var data = {
     source: "friendsgiving download-recipes",
     email: $('#download-recipe-form')[0][1].value,
+    sendEmail: 0,
     name: $('#download-recipe-form')[0][0].value,
     tags: {
       // email: $('#download-recipe-form')[0][1].value,
@@ -159,6 +162,7 @@ function sendPlaceCardSignup(id,network,gw){
   var data = {
     source: "friendsgiving placecard signup",
     email: $('#placecard-form')[0][1].value,
+    sendEmail: 0,
     name: $('#placecard-form')[0][0].value,
     tags: {
     }
@@ -196,6 +200,7 @@ function sendTopicSignup(id,network,gw){
   var data = {
     source: "friendsgiving topic signup",
     email: $('#topic-form')[0][1].value,
+    sendEmail: 0,
     name: $('#topic-form')[0][0].value,
     tags: {
     }

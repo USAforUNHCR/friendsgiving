@@ -82,6 +82,15 @@
 			display: block;
 		}
 	}
+	.placard-img-container {
+		text-align:center;
+
+		img{
+			width:50%;
+			float:center;
+			border-radius: 10px;
+		}
+	}
 }
 
 .download{
