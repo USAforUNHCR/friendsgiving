@@ -85,7 +85,7 @@
 	}
 
 
-	.recipe-card, .placecard-card {
+	.recipe-card, .placecard-card, .topic-card {
 		width: 15em;
 		height: 14em;
 		display-inline: block;
@@ -125,10 +125,32 @@
 			
 		}
 	}
+	.topic-card{
+		background-color:$lightest-beige;
+		color: $brown;
+		border: 2px solid $brown;
+		padding: 1em;
+		width: 19em;
+		height: 10em;
+
+	}
+	.topic-started {
+		white-space: wrap;
+		text-algin:center;
+		font-size: 1em;
+		white-space:normal;
+		text-align:center;
+		float:center;
+		padding: .4em;
+
+		color: $brown;
+		vertical-align: middle;
+	}
 	.placecard-card {
 		height: 15em;
+		background-color: $lightest-beige;
 		h2{
-			color: $text-yellow;
+			color: $brown;
 			text-align:center;
 			margin-top: .5em;
 		}
