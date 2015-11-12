@@ -18,44 +18,13 @@ $(document).ready(function(){
   showPlacecard();
   showTopic();
 
+  //Clear local storage
+
+  clearBtn();
+
 
 });
 
-// function submitRecipe(){
-// 	$form = $("#create-recipe-form");
-
-// 	$form.submit(function(event){
-// 		console.log($form);
-// 		event.preventDefault();
-// 		// data = {
-// 		//   email: email,
-// 		//   source: "friendsgiving recipe",
-// 		//   tags:{
-// 		//     recipeTitle:"title",
-// 		//     recipeInstructions: "etc",
-// 		//     sendEmail: 0
-// 		//     }
-// 		//   }
-
-// 		$.ajax({
-// 			type: "POST",
-// 			url: '//nyc.us11.list-manage.com/subscribe/post-json?u=7aa897cfc40f7cfbb83ffadd4&amp;id=c8e53459bc&c=?',
-// 			data: $form.serialize(),
-// 			timeout: 5000,
-// 			cache: false,
-// 			dataType: 'jsonp',
-// 			contentType: "application/json; charset=utf-8",
-// 			error: function(err) {console.log("Error.")},
-// 			success: function(data){
-// 				if (data.result != "success") {
-// 					console.log("error")
-// 				} else {
-// 					console.log("success")
-// 				}
-// 			}
-// 		})
-// 	})
-// }
 function getId(){
   var id = /=(.*)/.exec(document.location.href);
   if(id){
@@ -135,7 +104,7 @@ function sendHeaderData(id,network,gw){
   .catch(function(res){
     console.log(res);
     console.log("failure")
-    $("#header-error").append("we're sorry, an error has occured.")
+    $("#form-create-recipe").append("we're sorry, an error has occured.")
   });
 };
 
@@ -259,9 +228,7 @@ function showRecipe() {
 //placecard
 
 function showPlacecard() {
-  console.log(localStorage)
-  
-  console.log("AGAHAHHAHAH 3")
+
   if (localStorage.placecard == "show") {
     $("#download-place-cards").show();
   } else {
@@ -274,7 +241,15 @@ function showTopic() {
   if (localStorage.topic == "show") {
     $("#download-topics").show();
   } else {
-    $("#download-topics").show();
+    $("#download-topics").hide();
   }
+}
+function clearBtn(){
+  $("#clear-btn").on("click", function(){
+    localStorage.topic = ""
+    localStorage.placecard = ""
+    localStorage.recipe = ""
+    console.log(localStorage)
+  })
 }
 

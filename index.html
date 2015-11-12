@@ -96,25 +96,7 @@ layout: home
       <div></div>
       
     </div>
-    <div class="gallery-container">
-      <ul class="post-list">
-        {% for post in site.posts %}
-          {% if post.type == "topic" %}
-
-            <li>
-              <div class="recipe-card">
-                {% if post.image %}
-                  <img src="{{post.image}}" class="recipe-image">
-                  
-                {% endif %}
-                <span class="post-meta" id="pic-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                <h2 class="recipe-name">{{ post.title }}</h2>
-              </div>
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
+    
     <div class="mobile" >
       <h1 class="page-heading"><span class="head-icon"></span> Mobile Game</h1>
       <p class="mobile-copy">Play the Friendsgiving Scavenger Hunt right at your table! Have all your

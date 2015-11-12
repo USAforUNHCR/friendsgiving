@@ -6,6 +6,7 @@
 		@include shift(0);
 		width:100%;
 	}
+	margin-bottom:2em;
 }
 .placecard-copy{
 	@include span-columns(5);
@@ -94,6 +95,7 @@
   background-color: $background-beige;
   color: $heading-brown;
   border: none;
+  float:center;
 
   border-radius: 4px;
   transition: all .3s ease-in-out;
@@ -123,11 +125,12 @@ a#download-recipe{
 	
 }
 #download-place-cards{
-	display:none;
+
 }
 #download-topics{
-	display:none;
+
 }
 a#download-topics.download{
-	display:none;
+
 }
+
