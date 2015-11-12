@@ -28,6 +28,7 @@
 	
 }
 .banner-copy{
+  font-size: 1.2em;
 	text-align: center;
   position: absolute;
   bottom: 0;
@@ -35,7 +36,7 @@
   text-shadow: 1px 1px $brown;
   @include span-columns(10 of 12);
   padding:5%;
-  margin-bottom: 2vh auto 0 auto;
+  margin: 2vh auto 0 auto;
   font-family: 'Coming Soon', sans-serif;
   @include media($tablet) {
     @include span-columns(8 of 8);
