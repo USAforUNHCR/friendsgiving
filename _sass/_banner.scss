@@ -15,7 +15,7 @@
   @include media($tablet) {
     @include span-columns(8 of 8);
     font-size: 4.2em;
-    top: 16%;
+    top: .5em;
   }
 	@include media($mobile) {
 		@include span-columns(4 of 4);
@@ -37,7 +37,7 @@
     @include span-columns(8 of 8);
     width: 100%;
     padding:0 10% 0 10%;
-    bottom: 10%;
+    top: 4.5em;
     margin:5px;
   }
   @include media($mobile) {

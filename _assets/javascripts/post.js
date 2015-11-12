@@ -14,44 +14,17 @@ $(document).ready(function(){
   placeCardSignup(id,gw);
   topicSignup(id,gw);
 
+  showRecipe();
+  showPlacecard();
+  showTopic();
+
+  //Clear local storage
+
+  clearBtn();
+
 
 });
 
-// function submitRecipe(){
-// 	$form = $("#create-recipe-form");
-
-// 	$form.submit(function(event){
-// 		console.log($form);
-// 		event.preventDefault();
-// 		// data = {
-// 		//   email: email,
-// 		//   source: "friendsgiving recipe",
-// 		//   tags:{
-// 		//     recipeTitle:"title",
-// 		//     recipeInstructions: "etc",
-// 		//     sendEmail: 0
-// 		//     }
-// 		//   }
-
-// 		$.ajax({
-// 			type: "POST",
-// 			url: '//nyc.us11.list-manage.com/subscribe/post-json?u=7aa897cfc40f7cfbb83ffadd4&amp;id=c8e53459bc&c=?',
-// 			data: $form.serialize(),
-// 			timeout: 5000,
-// 			cache: false,
-// 			dataType: 'jsonp',
-// 			contentType: "application/json; charset=utf-8",
-// 			error: function(err) {console.log("Error.")},
-// 			success: function(data){
-// 				if (data.result != "success") {
-// 					console.log("error")
-// 				} else {
-// 					console.log("success")
-// 				}
-// 			}
-// 		})
-// 	})
-// }
 function getId(){
   var id = /=(.*)/.exec(document.location.href);
   if(id){
@@ -61,21 +34,22 @@ function getId(){
     return -1
   }
 }
-//1 share recipe
-function shareRecipe(id,gw){
+//1 header signup
+function shareHeader(id,gw){
   $('.email-signup').submit(function(event){
   	console.log($('.email-signup'))
     event.preventDefault();
     var network = $(event.target).attr('class');
-    sendRecipeData(id,network,gw);
+    sendHeaderData(id,network,gw);
   });
 
 }
 
-function sendRecipeData(id,network,gw){
+function sendHeaderData(id,network,gw){
   var data = {
     source: "friendsgiving header signup",
     email: $('.email-signup')[0][0].value,
+    sendEmail: 0,
     name: $('.email-signup')[0][1].value,
     mobile: $('.email-signup')[0][2].value,
     tags: {
@@ -91,29 +65,32 @@ function sendRecipeData(id,network,gw){
   .then(function(res){
     console.log(res);
     console.log("success")
+    $("#header-error").append("Thank you for signing up!")
   })
   .catch(function(res){
     console.log(res);
     console.log("failure")
-    $("#share-recipe-error").append("sorry an error has occured")
+    $("#header-error").append("sorry an error has occured")
   });
 };
-// 2 header sigup
-function shareHeader(id,gw){
+// 2 shareRecipe
+function shareRecipe(id,gw){
   $('#create-recipe-form').submit(function(event){
   	console.log('#create-recipe-form')
   	console.log($('#create-recipe-form'))
     event.preventDefault();
     var network = $(event.target).attr('class');
-    sendHeaderData(id,network,gw);
+    sendRecipeData(id,network,gw);
   });
 
 }
 
-function sendHeaderData(id,network,gw){
+function sendRecipeData(id,network,gw){
   var data = {
     source: "friendsgiving share recipe",
-    email: "test@test.com",
+    name: $('#create-recipe-form')[0][1].value,
+    email: $('#create-recipe-form')[0][0].value,
+    sendEmail: 0,
     tags: {
       email: $('#create-recipe-form')[0][0].value,
       name: $('#create-recipe-form')[0][1].value,
@@ -127,11 +104,13 @@ function sendHeaderData(id,network,gw){
   .then(function(res){
     console.log(res);
     console.log("success")
+    
   })
   .catch(function(res){
     console.log(res);
     console.log("failure")
-    $("#header-error").append("we're sorry, an error has occured.")
+    $("#share-recipe-error").append("we're sorry, an error has occured.")
+
   });
 };
 
@@ -143,6 +122,7 @@ function recipeSignup(id,gw){
     var network = $(event.target).attr('class');
     sendRecipeSignup(id,network,gw);
   });
+  
 
 }
 
@@ -150,6 +130,7 @@ function sendRecipeSignup(id,network,gw){
   var data = {
     source: "friendsgiving download-recipes",
     email: $('#download-recipe-form')[0][1].value,
+    sendEmail: 0,
     name: $('#download-recipe-form')[0][0].value,
     tags: {
       // email: $('#download-recipe-form')[0][1].value,
@@ -159,10 +140,12 @@ function sendRecipeSignup(id,network,gw){
   console.log(data);
   gw.supporters.create(data)
   .then(function(res){
+    localStorage.recipe = "show";
     console.log(res);
     console.log("success")
   })
   .catch(function(res){
+
     console.log(res);
     console.log("failure")
     $("#download-recipe-error").append("We're sorry, an error has occured.")
@@ -177,13 +160,13 @@ function placeCardSignup(id,gw){
     var network = $(event.target).attr('class');
     sendPlaceCardSignup(id,network,gw);
   });
-
 }
 
 function sendPlaceCardSignup(id,network,gw){
   var data = {
     source: "friendsgiving placecard signup",
     email: $('#placecard-form')[0][1].value,
+    sendEmail: 0,
     name: $('#placecard-form')[0][0].value,
     tags: {
     }
@@ -192,11 +175,14 @@ function sendPlaceCardSignup(id,network,gw){
   gw.supporters.create(data)
   .then(function(res){
     console.log(res);
+    localStorage.placecard = "show";
     console.log("success")
   })
   .catch(function(res){
+    showPlacecard()
     console.log(res);
     console.log("failure")
+
     $("#placecard-error").append("We're sorry, an error has occured.")
   });
 };
@@ -210,6 +196,7 @@ function topicSignup(id,gw){
     var network = $(event.target).attr('class');
     sendTopicSignup(id,network,gw);
   });
+  
 
 }
 
@@ -217,6 +204,7 @@ function sendTopicSignup(id,network,gw){
   var data = {
     source: "friendsgiving topic signup",
     email: $('#topic-form')[0][1].value,
+    sendEmail: 0,
     name: $('#topic-form')[0][0].value,
     tags: {
     }
@@ -224,12 +212,53 @@ function sendTopicSignup(id,network,gw){
   console.log(data);
   gw.supporters.create(data)
   .then(function(res){
+    localStorage.topic = "show";
     console.log(res);
     console.log("success")
   })
   .catch(function(res){
+    
     console.log(res);
     console.log("failure")
-    $("#placecard-error").append("We're sorry, an error has occured.")
+    $("#topic-error").append("We're sorry, an error has occured.")
   });
 };
+
+//recipe
+function showRecipe() {
+  
+  if (localStorage.recipe == "show") {
+    $("#download-recipe").show();
+  } else {
+    $("#download-recipe").hide();
+  }
+}
+
+//placecard
+
+function showPlacecard() {
+
+  if (localStorage.placecard == "show") {
+    $("#download-place-cards").show();
+  } else {
+    $("#download-place-cards").hide();
+  }
+}
+//topic
+function showTopic() {
+  $("#download-topics").show();
+  if (localStorage.topic == "show") {
+    $("#download-topics").show();
+  } else {
+    $("#download-topics").hide();
+  }
+}
+function clearBtn(){
+  $("#clear-btn").on("click", function(){
+    localStorage.topic = ""
+    localStorage.placecard = ""
+    localStorage.recipe = ""
+    console.log(localStorage)
+  })
+}
+

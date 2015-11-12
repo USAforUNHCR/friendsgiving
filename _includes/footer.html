@@ -6,24 +6,14 @@
     
     <div class="footer-left">
       <h2 class="footer-heading">{{ site.title }}</h2>
-      {% for page in site.pages %}
-        {% if page.title %}
-        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        {% endif %}
-      {% endfor %}
+      <p>pie slice by Theresa Berens from the Noun Project<br>
+          leaf by Tanya Tulupenko from the Noun Project<br>
+          Turkey by ▲▲▲ from the Noun Project
+        </p>
     </div>
 
     <a href="mailto:{{ site.email }}" class="footer-email">{{ site.email }}</a>
-
-
-
-      
-
-
-          
-
-     
-
+    
 
       
     <div class="footer-right">
@@ -35,6 +25,8 @@
     
       </div>
       <a href="http://www.unrefugees.org/" >{% image unhcr_logo.jpg class="un-logo" %}</a>
+      <a id="clear-btn" href=""> clear local</a>
+      
     
     </div>
           

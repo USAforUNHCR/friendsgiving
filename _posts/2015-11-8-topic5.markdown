@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "topic 5"
+title:  "More than half of all refugees worldwidecame from just three countries: the Syrian Arab Republic (3.88 million), Afghanistan (2.59 million), and Somalia (1.11 million)."
 date:   2015-10-13 10:53:36
 categories: jekyll update
 image: ./images/potatoes.jpg

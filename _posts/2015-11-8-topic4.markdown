@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "topic 4"
+title:  "Where we are born determines a lot about our lives."
 date:   2015-10-13 10:53:36
 categories: jekyll update
 image: ./images/potatoes.jpg

@@ -12,20 +12,25 @@
 }
 
 .site-title {
-    font-size: 26px;
+    font-size: 2em;
     line-height: 56px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
     display: inline-block;
+    margin-top: .5em;
+
+
 
     &,
     &:visited {
         color: $grey-color-dark;
     }
     & img {
-        height: 40px;
+        height: 1.3em;
         vertical-align: top;
+        margin-left:.5em;
+
     }
 }
 

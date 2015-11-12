@@ -6,6 +6,7 @@
 		@include shift(0);
 		width:100%;
 	}
+	margin-bottom:2em;
 }
 .placecard-copy{
 	@include span-columns(5);
@@ -23,10 +24,11 @@
 	background-color: #F7A92C;
 	@include span-columns(5);
 	color: $brown;
-	margin-top: -2.5em;
+	margin-top: -.75em;
+	margin-left: 2em;
 	padding: 2% .5% 2% .5%;
 	outline: double 3px $heading-brown;
-	float:right;
+
 	h3{
 		text-align: center;
 		font-size: 1.7em;
@@ -80,4 +82,94 @@
 			display: block;
 		}
 	}
+	.placard-img-container {
+		text-align:center;
+
+		img{
+			width:50%;
+			float:center;
+			border-radius: 10px;
+		}
+	}
+}
+.placecard-card{
+	border:double 4px $heading-brown;
+
+	#from{
+		text-align:center;
+		display: block;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:.5em;
+		color: $yellow;
+	}
+	img{
+		width: 1em;
+	
+	}
+}
+
+.placecard-person-name{
+	text-align:center;
+	width: 6em;
+	text-align:center;
+	margin-top:.3em;
+	margin-left:auto;
+	margin-right:auto;
+	padding: .5em;
+	border-bottom:double 4px $heading-brown;
+	border-top:double 4px $heading-brown;
+}
+
+.download{
+	text-align:center;
+	width: 5em;
+  margin: auto;
+  margin-top: 2%;
+  display: block;
+  font-family: inherit;
+  font-size: 18pt;
+  background-color: $background-beige;
+  color: $heading-brown;
+  border: none;
+  float:center;
+
+  border-radius: 4px;
+  transition: all .3s ease-in-out;
+  @include media($tablet){
+  	clear:both;
+  }
+  @include media($mobile){
+		@include span-columns(2 of 4);
+		@include shift(1);
+
+	}
+	display:block;
+
+}
+a#download-place-cards.download{
+	display: block;
+
+}
+a#download-topics.download{
+	display: block;
+
+}
+a#download-recipe{
+	
+}
+#download-recipe{
+	
+}
+#download-place-cards{
+
+}
+#download-topics{
+
+}
+a#download-topics.download{
+
+}
+#share-recipe-error, #download-recipe-error{
+	text-align:center;
 }

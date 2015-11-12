@@ -26,7 +26,7 @@
 	@include span-columns(5);
 
 	display: inline-block;
-	margin: -4em  1px 1px 1px;
+	margin: -.75em  1px 1px 2em;
 	text-align: center;
 	padding: 2em .5em 2em .5em;
 	outline: double 3px $heading-brown;
@@ -48,6 +48,9 @@
 	button:hover{
 		color: $brown;
 	}
+	a#download-recipe.download{
+		display:none;
+	}
 }
 .exchange-copy{
 	@include span-columns(5);
@@ -60,6 +63,7 @@
 		margin-bottom: 5em;
 		padding: 6px;
 	}
+	
 }
 
 
@@ -81,7 +85,7 @@
 	}
 
 
-	.recipe-card {
+	.recipe-card, .placecard-card, .topic-card {
 		width: 15em;
 		height: 14em;
 		display-inline: block;
@@ -121,9 +125,50 @@
 			
 		}
 	}
+	.topic-card{
+		background-color:$lightest-beige;
+		color: $brown;
+		border: 2px solid $brown;
+		padding: 1em;
+		width: 19em;
+		height: 10em;
+
+	}
+	.topic-started {
+		white-space: wrap;
+		text-algin:center;
+		font-size: 1em;
+		white-space:normal;
+		text-align:center;
+		float:center;
+		padding: .4em;
+
+		color: $brown;
+		vertical-align: middle;
+	}
+	.placecard-card {
+		height: 15em;
+		background-color: $lightest-beige;
+		h2{
+			color: $brown;
+			text-align:center;
+			margin-top: .5em;
+		}
+		img{
+			width: 3em;
+			display: block;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
 	.recipe-card:hover{
 		border: 1px solid #4F2E1E;
 	}
 
 	
+}
+.gallery-container{
+	font-family:$font;
+	line-height:1.5em;
+	color: $brown;
 }

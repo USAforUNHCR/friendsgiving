@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "topic 2"
+title:  "There are 60 million refugees worldwide."
 date:   2015-10-13 10:53:36
 categories: jekyll update
 image: ./images/potatoes.jpg
