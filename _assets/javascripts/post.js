@@ -34,18 +34,18 @@ function getId(){
     return -1
   }
 }
-//1 share recipe
-function shareRecipe(id,gw){
+//1 header signup
+function shareHeader(id,gw){
   $('.email-signup').submit(function(event){
   	console.log($('.email-signup'))
     event.preventDefault();
     var network = $(event.target).attr('class');
-    sendRecipeData(id,network,gw);
+    sendHeaderData(id,network,gw);
   });
 
 }
 
-function sendRecipeData(id,network,gw){
+function sendHeaderData(id,network,gw){
   var data = {
     source: "friendsgiving header signup",
     email: $('.email-signup')[0][0].value,
@@ -65,29 +65,31 @@ function sendRecipeData(id,network,gw){
   .then(function(res){
     console.log(res);
     console.log("success")
+    $("#header-error").append("Thank you for signing up!")
   })
   .catch(function(res){
     console.log(res);
     console.log("failure")
-    $("#share-recipe-error").append("sorry an error has occured")
+    $("#header-error").append("sorry an error has occured")
   });
 };
-// 2 header sigup
-function shareHeader(id,gw){
+// 2 shareRecipe
+function shareRecipe(id,gw){
   $('#create-recipe-form').submit(function(event){
   	console.log('#create-recipe-form')
   	console.log($('#create-recipe-form'))
     event.preventDefault();
     var network = $(event.target).attr('class');
-    sendHeaderData(id,network,gw);
+    sendRecipeData(id,network,gw);
   });
 
 }
 
-function sendHeaderData(id,network,gw){
+function sendRecipeData(id,network,gw){
   var data = {
     source: "friendsgiving share recipe",
-    email: "test@test.com",
+    name: $('#create-recipe-form')[0][1].value,
+    email: $('#create-recipe-form')[0][0].value,
     sendEmail: 0,
     tags: {
       email: $('#create-recipe-form')[0][0].value,
@@ -102,11 +104,13 @@ function sendHeaderData(id,network,gw){
   .then(function(res){
     console.log(res);
     console.log("success")
+    
   })
   .catch(function(res){
     console.log(res);
     console.log("failure")
-    $("#form-create-recipe").append("we're sorry, an error has occured.")
+    $("#share-recipe-error").append("we're sorry, an error has occured.")
+
   });
 };
 

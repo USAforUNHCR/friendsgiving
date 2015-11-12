@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "two"
+title:  "Noujain"
+country: "Syria"
 date:   2015-10-13 10:53:22
 categories: jekyll update
 image: ./images/potatoes.jpg

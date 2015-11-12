@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "three"
+title:  "Gabby"
+country: "Honduras"
 date:   2015-10-13 10:53:33
 categories: jekyll update
 image: ./images/potatoes.jpg

@@ -85,7 +85,7 @@
 	}
 
 
-	.recipe-card {
+	.recipe-card, .placecard-card {
 		width: 15em;
 		height: 14em;
 		display-inline: block;
@@ -125,6 +125,20 @@
 			
 		}
 	}
+	.placecard-card {
+		height: 15em;
+		h2{
+			color: $text-yellow;
+			text-align:center;
+			margin-top: .5em;
+		}
+		img{
+			width: 3em;
+			display: block;
+			margin-left:auto;
+			margin-right:auto;
+		}
+	}
 	.recipe-card:hover{
 		border: 1px solid #4F2E1E;
 	}
@@ -134,4 +148,5 @@
 .gallery-container{
 	font-family:$font;
 	line-height:1.5em;
+	color: $brown;
 }

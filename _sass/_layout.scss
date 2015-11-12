@@ -18,6 +18,9 @@
     margin-bottom: 0;
     float: left;
     display: inline-block;
+    margin-top: .5em;
+
+
 
     &,
     &:visited {
@@ -26,6 +29,8 @@
     & img {
         height: 1.3em;
         vertical-align: top;
+        margin-left:.5em;
+
     }
 }
 

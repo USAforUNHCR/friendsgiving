@@ -72,13 +72,14 @@ layout: home
           </div>
           
           <h3>Enter your name and email to download</h3>
+          <p class="error" id="placecard-error"></p>
           <label>name*</label>
           <input type="text" required><br>
           <label>email*</label>
           <input type="email" required><br>
 
           <input type="submit">
-          <p class="error" id="placecard-error"></p>
+          
           
           <a href="./images/files/name-cards_for-print.pdf" download class="download" id="download-place-cards" >download</a>
 
@@ -89,16 +90,13 @@ layout: home
 
         <ul class="post-list">
           {% for post in site.posts %}
-            {% if post.type == "recipe" %}
+            {% if post.type == "placecard" %}
               <li>
-                <div class="recipe-card">
-                  {% if post.image %}
-                  <div class="image-container">
-                    <img src="{{post.image}}" class="recipe-image">
-                  </div>
-                  {% endif %}
-                  <span class="post-meta country" id="country"> A recipe from {{ post.country }}</span>
-                  <h2 class="recipe-name">{{ post.title }}</h2>
+                <div class="placecard-card">
+                  <h2>Friendsgiving</h2>
+                  {% image turkey.svg class="turkey" %}
+                  <span class="post-meta country" id="from"> A new friend from {{ post.country }}</span>
+                  <h2 class="placecard-person-name">{{ post.title }}</h2>
                 </div>
               </li>
             {% endif %}

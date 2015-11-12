@@ -92,6 +92,31 @@
 		}
 	}
 }
+.placecard-card{
+	border:double 4px $heading-brown;
+	#from{
+		text-align:center;
+		display: block;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	img{
+		width: 1em;
+		backgroun-color:red;
+	}
+}
+
+.placecard-person-name{
+	text-align:center;
+	width: 5em;
+	text-align:center;
+	margin-top:.3em;
+	margin-left:auto;
+	margin-right:auto;
+	padding: .5em;
+	border-bottom:double 4px $heading-brown;
+	border-top:double 4px $heading-brown;
+}
 
 .download{
 	text-align:center;
@@ -142,4 +167,6 @@ a#download-recipe{
 a#download-topics.download{
 
 }
-
+#share-recipe-error, #download-recipe-error{
+	text-align:center;
+}
