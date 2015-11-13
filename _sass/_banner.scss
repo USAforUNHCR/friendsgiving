@@ -43,14 +43,14 @@
     width: 100%;
     padding:0 10% 0 10%;
     top: 4.5em;
-    margin:5px;
+    margin: 5px;
   }
   @include media($mobile) {
 		@include span-columns(4 of 4);
 		width: 100%;
-		padding:0 3px 0 3px;
-		bottom: 2%;
-		margin:3px;
-    font-size: .8em;
+		padding:0 5px 0 5px;
+		top: 5em;
+		margin: 3px;
+    font-size: .9em;
 	}
 }
