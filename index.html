@@ -86,24 +86,7 @@ layout: home
 
         </form>
       </div>
-      <div class="gallery-container">
 
-        <ul class="post-list">
-          {% for post in site.posts %}
-            {% if post.type == "placecard" %}
-              <li>
-                <div class="placecard-card">
-                  <h2>Friendsgiving</h2>
-                  {% image turkey.svg class="turkey" %}
-                  <span class="post-meta country" id="from"> A new friend from {{ post.country }}</span>
-                  <h2 class="placecard-person-name">{{ post.title }}</h2>
-                </div>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
 
     <div class="conversation" id="topic-top">
       <h1 class="page-heading"><span class="head-icon">{% image placecard.svg %}</span>Dinner Conversation Starters</h1>
@@ -124,23 +107,7 @@ layout: home
       <div></div>
       
     </div>
-    <div class="gallery-container">
 
-        <ul class="post-list">
-          {% for post in site.posts %}
-            {% if post.type == "topic" %}
-              <li>
-                <div class="topic-card">
-                  
-                  <h2 class="topic-started">{{ post.title }}</h2>
-
-
-                </div>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
     
     
   </div>
