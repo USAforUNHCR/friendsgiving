@@ -1,8 +1,10 @@
 
 .post-list{
 	overflow-y: scroll;
-	@include span-columns(11 of 12);
+	@include span-columns(12 of 12);
 	white-space: nowrap;
+	width: 100%;
+	margin: auto;
 	@include media($mobile){
 		@include span-columns(4 of 4);
 		@include shift(0);
@@ -13,6 +15,7 @@
 	li{
 		display:inline-block;
 		vertical-align:text-top;
+		margin: auto;
 	}
 }
 .page-heading{
@@ -77,6 +80,7 @@
 	overflow-y: hidden;
 	overflow-x: scroll;
 	white-space: wrap;
+	text-align: center;
 
 
 	@include media($mobile){

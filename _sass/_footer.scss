@@ -15,7 +15,7 @@
 	height: 50px;
 	padding:2px;
 	margin:3px;
-	background-color: $light-beige;
+	// background-color: ;
 	border-radius:8px;
 	float:right;
 }
@@ -36,6 +36,7 @@
 	@include span-columns(6);
 	display:inline-block;
 	float:left;
+	padding-left: 5px;
 	@include media($mobile){
 		@include span-columns(4 of 4);
 		float: center;
@@ -59,6 +60,7 @@
 .footer-email{
 	@include span-columns(6);
 	display:inline-block;
+	margin-left: 5px;
 	@include media($mobile){
 		@include span-columns(4 of 4);
 		float: center;
