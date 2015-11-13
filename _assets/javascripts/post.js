@@ -3,7 +3,7 @@
 $(document).ready(function(){
 	var gw = new Groundwork({
     'api_url': 'https://api.thegroundwork.com',
-		'oauth_client_id': 'pub-un-test.refugee-survey-int-30wNLFqA4VCph7fWteAfRartPvyFP7XEuvE.XSI21OEpd4MFgLOqRPcGSdOTVxohT1XU18eLBVflSM2WjIHigw'
+		'oauth_client_id': 'pub-un-test.friendsgiving-test-int-bS2yz4XN3cIYL0pOZ.ffsnF0rWKk39CW.afnZDYwdjQTIC8W8oZp4N6C6fblvC.Jw7_uypWGPhGOeoT0mPrEAw'
   });
 
   // submitRecipe();
