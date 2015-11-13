@@ -49,10 +49,8 @@ function sendHeaderData(id,network,gw){
   var data = {
     source: "friendsgiving header signup",
     email: $('.email-signup')[0][0].value,
-    sendEmail: 0,
-    
     tags: {
-
+      sendEmail: 0,
       name: $('.email-signup')[0][1].value,
       mobile: $('.email-signup')[0][2].value
       // email: $('.email-signup')[0][0].value,
