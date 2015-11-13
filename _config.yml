@@ -1,9 +1,9 @@
 # Site settings
-title: Friendsgiving
+title: Refugee Friendsgiving
 email: admin@unrefugees.org
-description: Friendsgiving
+description: Refugee Friendsgiving
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://refugeefriendsgiving.co" # the base hostname & protocol for your site
 twitter_username: unrefugeeagency
 
 
@@ -16,3 +16,7 @@ sass:
 markdown: kramdown
 
 exclude: [vendor, 'Gemfile', 'Gemfile.lock', 'Readme.md']
+
+assets:
+  js_compressor: uglifier
+  css_compressor: sass
