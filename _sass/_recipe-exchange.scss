@@ -70,13 +70,15 @@
 .gallery-container{
 	
 	padding:10px;
-	padding-bottom: 10em;
+	padding-bottom: 0;
 	border-bottom: 2px solid #DA7730;
 	height: 17em;
 	@include span-columns(12 of 12);
 	overflow-y: hidden;
 	overflow-x: scroll;
 	white-space: wrap;
+
+
 	@include media($mobile){
 		@include span-columns(4 of 4);
 		@include shift(0);
@@ -92,6 +94,8 @@
 		background-color: #DA7730;
 		border-radius: 5px;
 		word-wrap: break-word;
+		margin-bottom:0;
+
 
 		.image-container{
 			height: 7em;
@@ -147,7 +151,7 @@
 		vertical-align: middle;
 	}
 	.placecard-card {
-		height: 15em;
+		height: 13em;
 		background-color: $lightest-beige;
 		h2{
 			color: $brown;
@@ -171,4 +175,41 @@
 	font-family:$font;
 	line-height:1.5em;
 	color: $brown;
+	margin-bottom: 1em;
+	ul {
+		margin-bottom:2em;
+	}
+
+
+	ul::-webkit-scrollbar {
+
+    width: .1em;
+    heigth: .5em;
+    margin-bottom: 1em;
+    border-radius:10px;
+
+	}
+
+	ul::-webkit-scrollbar {
+		background-color: $background-beige;
+		padding: 5px;
+		border-radius:10px;
+	}      
+	ul::-webkit-scrollbar-button  {
+		background-color: $brown;
+	}
+	 
+	ul::-webkit-scrollbar-track {
+	    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	    padding: 5px;
+	}
+	ul::-webkit-scrollbar-corner{
+		background-color: $background-beige
+	}
+	 
+	ul::-webkit-scrollbar-thumb {
+	  background-color: $brown;
+	  outline: 1px solid $brown;
+	}
 }
+
