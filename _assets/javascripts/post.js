@@ -50,7 +50,7 @@ function sendHeaderData(id,network,gw){
     source: "friendsgiving header signup",
     email: $('.email-signup')[0][0].value,
     tags: {
-      sendEmail: 0,
+      send_email: 0,
       name: $('.email-signup')[0][1].value,
       mobile: $('.email-signup')[0][2].value
       // email: $('.email-signup')[0][0].value,
@@ -93,7 +93,7 @@ function sendRecipeData(id,network,gw){
     name: $('#create-recipe-form')[0][1].value,
     email: $('#create-recipe-form')[0][0].value,
     tags: {
-      sendEmail: 0,
+      send_email: 0,
       email: $('#create-recipe-form')[0][0].value,
       name: $('#create-recipe-form')[0][1].value,
       recipeName: $('#create-recipe-form')[0][2].value,
@@ -135,7 +135,7 @@ function sendRecipeSignup(id,network,gw){
     source: "friendsgiving download-recipes",
     email: $('#download-recipe-form')[0][1].value,
     tags: {
-      sendEmail: 0,
+      send_email: 0,
       name: $('#download-recipe-form')[0][0].value
       // email: $('#download-recipe-form')[0][1].value,
       // name: $('#download-recipe-form')[0][0].value
@@ -174,7 +174,7 @@ function sendPlaceCardSignup(id,network,gw){
     email: $('#placecard-form')[0][1].value,
     name: $('#placecard-form')[0][0].value,
     tags: {
-      sendEmail: 0
+      send_email: 0
     }
   }
   console.log(data);
@@ -214,7 +214,7 @@ function sendTopicSignup(id,network,gw){
     email: $('#topic-form')[0][1].value,
     name: $('#topic-form')[0][0].value,
     tags: {
-      sendEmail: 0
+      send_email: 0
     }
   }
   console.log(data);
