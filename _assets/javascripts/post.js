@@ -50,9 +50,11 @@ function sendHeaderData(id,network,gw){
     source: "friendsgiving header signup",
     email: $('.email-signup')[0][0].value,
     sendEmail: 0,
-    name: $('.email-signup')[0][1].value,
-    mobile: $('.email-signup')[0][2].value,
+    
     tags: {
+
+      name: $('.email-signup')[0][1].value,
+      mobile: $('.email-signup')[0][2].value
       // email: $('.email-signup')[0][0].value,
       // name: $('.email-signup')[0][1].value,
       // recipeName: $('.email-signup')[0][2].value,
@@ -65,6 +67,8 @@ function sendHeaderData(id,network,gw){
   .then(function(res){
     console.log(res);
     console.log("success")
+    $('.email-signup')[0].reset();
+
     $("#header-error").append("Thank you for signing up!")
   })
   .catch(function(res){
@@ -104,6 +108,8 @@ function sendRecipeData(id,network,gw){
   .then(function(res){
     console.log(res);
     console.log("success")
+    $('#create-recipe-form')[0].reset();
+    window.location.reload();
     
   })
   .catch(function(res){
@@ -131,8 +137,9 @@ function sendRecipeSignup(id,network,gw){
     source: "friendsgiving download-recipes",
     email: $('#download-recipe-form')[0][1].value,
     sendEmail: 0,
-    name: $('#download-recipe-form')[0][0].value,
+    
     tags: {
+      name: $('#download-recipe-form')[0][0].value
       // email: $('#download-recipe-form')[0][1].value,
       // name: $('#download-recipe-form')[0][0].value
     }
@@ -143,6 +150,8 @@ function sendRecipeSignup(id,network,gw){
     localStorage.recipe = "show";
     console.log(res);
     console.log("success")
+    $('#download-recipe-form')[0].reset();
+    window.location.reload();
   })
   .catch(function(res){
 
@@ -177,6 +186,8 @@ function sendPlaceCardSignup(id,network,gw){
     console.log(res);
     localStorage.placecard = "show";
     console.log("success")
+    $('#placecard-form')[0].reset();
+    window.location.reload();
   })
   .catch(function(res){
     showPlacecard()
@@ -215,6 +226,8 @@ function sendTopicSignup(id,network,gw){
     localStorage.topic = "show";
     console.log(res);
     console.log("success")
+    $('#topic-form')[0].reset();
+    window.location.reload();
   })
   .catch(function(res){
     
