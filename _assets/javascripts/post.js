@@ -1,11 +1,14 @@
 'user-strict'
-
+var adSource = "";
 $(document).ready(function(){
 	var gw = new Groundwork({
     'api_url': 'https://api.thegroundwork.com',
 		'oauth_client_id': 'pub-un.friendsgiving-int-dwa97qKD7hpHaLRQMBhhOgVCw853k.9QnvvSGallpL_rSWMvW4nGOlTecYrIUOpsMOzV5p_T_Cdk0h6XXCOz5g'
   });
 
+  regPhrase = /source=(.*)/;
+  ad = regPhrase.exec(window.location.href);
+  ad ? adSource = ad[1] : null;
   // submitRecipe();
   var id = getId();
   shareRecipe(id,gw);
@@ -52,7 +55,8 @@ function sendHeaderData(id,network,gw){
     tags: {
       send_email: 0,
       name: $('.email-signup')[0][1].value,
-      mobile: $('.email-signup')[0][2].value
+      mobile: $('.email-signup')[0][2].value,
+
       // email: $('.email-signup')[0][0].value,
       // name: $('.email-signup')[0][1].value,
       // recipeName: $('.email-signup')[0][2].value,
@@ -60,6 +64,7 @@ function sendHeaderData(id,network,gw){
       // imageLink: $('.email-signup')[0][4].value,
     }
   }
+  adSource ? data.tags.adSource = adSource : null;
   console.log(data);
   gw.supporters.create(data)
   .then(function(res){
@@ -101,6 +106,7 @@ function sendRecipeData(id,network,gw){
       imageLink: $('#create-recipe-form')[0][4].value,
     }
   }
+  adSource ? data.tags.adSource = adSource : null;
   console.log(data);
   gw.supporters.create(data)
   .then(function(res){
@@ -141,6 +147,7 @@ function sendRecipeSignup(id,network,gw){
       // name: $('#download-recipe-form')[0][0].value
     }
   }
+  adSource ? data.tags.adSource = adSource : null;
   console.log(data);
   gw.supporters.create(data)
   .then(function(res){
@@ -177,6 +184,7 @@ function sendPlaceCardSignup(id,network,gw){
       send_email: 0
     }
   }
+  adSource ? data.tags.adSource = adSource : null;
   console.log(data);
   gw.supporters.create(data)
   .then(function(res){
@@ -217,6 +225,7 @@ function sendTopicSignup(id,network,gw){
       send_email: 0
     }
   }
+  adSource ? data.tags.adSource = adSource : null;
   console.log(data);
   gw.supporters.create(data)
   .then(function(res){

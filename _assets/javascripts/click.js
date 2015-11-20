@@ -1,3 +1,4 @@
+
 $( document ).ready(function() {
 	// create new recipe modal
 	$("#share-button").on("click", function(){
